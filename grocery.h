@@ -13,3 +13,11 @@ typedef struct admins
     int id;
     char password[10];
 } admin;
+
+int checkadminlogin();
+
+int checkcustomerlogin();
+
+void registerCustomer();
+
+int checkdatabase(char* user,char* pass);

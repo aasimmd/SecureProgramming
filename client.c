@@ -13,16 +13,17 @@ int main()
             printf("Enter choice : \n");
             printf("1. Customer\n");
             printf("2. Admin\n");
-            int ac;
+            int ac,cchk,achk;
             scanf("%d", &ac);
             switch (ac)
             {
                 case 1:
-                    int cchk = checkcustomerlogin();
+                    cchk = checkcustomerlogin();
+                    printf("%d\n",cchk);
                     break;
                 
                 case 2:
-                    int achk = checkadminlogin();
+                    achk = checkadminlogin();
                     break;
 
                 default:
