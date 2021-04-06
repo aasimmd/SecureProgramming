@@ -3,13 +3,56 @@
 
 customer *cu;
 customer *tmp;
-admin *ad;
 
 int checkadminlogin()
 {
-    printf("admin\n");
-    return 1;
+    char loginid[100],password[100];
+    printf("Enter your Login ID: ");
+    fflush(stdin);
+    gets(loginid);
+    printf("Enter your password: ");
+    fflush(stdin);
+    gets(password);
+    fflush(stdin);
+
+    FILE* fp=fopen("admindata.txt","r");
+    if(!fp)
+        printf("Error in opening file");
+	char line[1024];
+	int lc=0;
+	for(char c=getc(fp); c!=EOF; c=getc(fp)) //counting number of lines in the database
+	{
+		if(c=='\n')
+			++lc;
+	}
+    rewind(fp);
+	int i=0;
+
+    char user[100], pass[100];
+    while (fgets(line,1024,(FILE*)fp) && i < lc) 
+    {
+        strcpy(user, strtok(line, ","));
+        strcpy(pass, strtok(NULL, "\n"));
+		
+		if (strcmp(user,loginid) == 0)
+        {
+            if(strcmp(pass,password) ==0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        else
+        {
+            return -1;
+        }
+    }
+	fclose(fp);
 }
+
 
 int checkcustomerlogin()
 {

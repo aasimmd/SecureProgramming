@@ -32,6 +32,7 @@ int main()
                 
                 case 2:
                     achk = checkadminlogin();
+                    printf("%d",achk);
                     break;
 
                 default:

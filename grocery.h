@@ -9,15 +9,8 @@ typedef struct customers
     struct customers* next;
 } customer;
 
-typedef struct admins
-{
-    char id;
-    char password[10];
-} admin;
-
 extern customer *cu;
 extern customer *tmp;
-extern admin *ad;
 
 int checkadminlogin();
 
