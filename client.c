@@ -1,7 +1,10 @@
 #include "grocery.h"
 
+
 int main()
 {
+    read_db_from_file();
+    //printall();
     printf("Enter your choice : \n");
     printf("1. Login\n");
     printf("2. Register\n");
@@ -20,6 +23,11 @@ int main()
                 case 1:
                     cchk = checkcustomerlogin();
                     printf("%d\n",cchk);
+                    if(cchk==1)
+                    {
+                        printf("%s\n", tmp->id);
+                        printf("%d", tmp->w_money);
+                    }
                     break;
                 
                 case 2:
@@ -40,5 +48,7 @@ int main()
             printf("Invalid Option");
             break;
     }
+
+    add_to_file();
     return 0;
 }
