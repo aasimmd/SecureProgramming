@@ -188,3 +188,76 @@ int printall()
     free(temp);
 	return 0;
 }
+
+void cart()
+{
+    //int sum_total;
+    printf("\n\nSelect the items you want to buy : \n");
+    printf("1. TOMATOES(1kg)-45Rs\n");
+    printf("2. ONIONS(1kg)-30Rs\n");
+    printf("3. RICE(2kgs)-15Rs\n");
+    printf("4. SUGAR(3kgS)-96Rs\n");
+    printf("5. POTATO(1KG-29Rs\n");
+    int a;
+    int q;
+    scanf("%d",&a);
+    printf("Enter quantity(kg) : ");
+    scanf("%d",&q);
+
+    switch (a)
+    {
+        case 1:
+            if (tmp->w_money-(45*q)>=0)
+            {
+                tmp->w_money-=(45*q);
+                printf("YOUR REMAINING BALANCE IS %d\n",tmp->w_money);
+            }
+            else
+                printf("YOU HAVE INSUFFICIENT FUNDS, PLEASE ADD MONEY TO PROCEED WITH CART\n");
+            break;
+
+        case 2:
+            if (tmp->w_money-(30*q)>=0)
+            {
+                tmp->w_money-=(30*q);
+                printf("YOUR REMAINING BALANCE IS %d\n",tmp->w_money);
+            }
+            else
+                printf("YOU HAVE INSUFFICIENT FUNDS, PLEASE ADD MONEY TO PROCEED WITH CART\n");
+            break;
+
+        case 3:
+            if (tmp->w_money-(15*q)>=0)
+            {
+                tmp->w_money-=(15*q);
+                printf("YOUR REMAINING BALANCE IS %d\n",tmp->w_money);
+            }
+            else
+                printf("YOU HAVE INSUFFICIENT FUNDS, PLEASE ADD MONEY TO PROCEED WITH CART\n");
+            break;
+
+        case 4:
+            if (tmp->w_money-(96*q)>=0)
+            {
+                tmp->w_money-=(96*q);
+                printf("YOUR REMAINING BALANCE IS %d\n",tmp->w_money);
+            }
+            else
+                printf("YOU HAVE INSUFFICIENT FUNDS, PLEASE ADD MONEY TO PROCEED WITH CART\n");
+            break;
+
+        case 5:
+            if (tmp->w_money-(29*q)>=0)
+            {
+                tmp->w_money-=(29*q);
+                printf("YOUR REMAINING BALANCE IS %d\n",tmp->w_money);
+            }
+            else
+                printf("YOU HAVE INSUFFICIENT FUNDS, PLEASE ADD MONEY TO PROCEED WITH CART\n");
+            break;
+
+        default:
+            printf("Invalid option\n");
+            break;
+    }
+}

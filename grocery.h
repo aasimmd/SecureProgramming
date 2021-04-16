@@ -25,3 +25,5 @@ void read_db_from_file();
 void add_to_file();
 
 int printall();
+
+void cart();

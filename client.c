@@ -27,6 +27,7 @@ int main()
                     {
                         printf("%s\n", tmp->id);
                         printf("%d", tmp->w_money);
+                        cart();
                     }
                     break;
                 
