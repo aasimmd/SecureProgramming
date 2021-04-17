@@ -5,7 +5,7 @@ typedef struct customers
 {
     char id[10];
     char password[10];
-    int w_money;
+    unsigned int w_money;
     struct customers* next;
 } customer;
 
