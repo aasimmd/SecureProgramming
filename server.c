@@ -7,13 +7,12 @@ customer *tmp;
 int checkadminlogin()
 {
     char loginid[100],password[100];
+    int flag;
     printf("Enter your Login ID: ");
-    fflush(stdin);
+    scanf("%d\n",&flag);
     gets(loginid);
     printf("Enter your password: ");
-    fflush(stdin);
     gets(password);
-    fflush(stdin);
 
     FILE* fp=fopen("admindata.txt","r");
     if(!fp)
@@ -59,12 +58,10 @@ int checkcustomerlogin()
     char loginid[100],password[100];
     int flag;
     printf("Enter your Login ID: ");
-    fflush(stdin);
+    scanf("%d\n",&flag);
     gets(loginid);
     printf("Enter your password: ");
-    fflush(stdin);
     gets(password);
-    fflush(stdin);
     printf("Your Creds are %s %s \n",&loginid,&password);
     flag = checkdatabase(loginid,password);
     return flag;
@@ -90,19 +87,17 @@ int checkdatabase(char * loginid,char * password)
 
 void registerCustomer()
 {
-    printf("register\n");
-
-    char loginid[100],password[100];
+    printf("Registration\n");
     int amount;
     customer *temp=(customer*)malloc(sizeof(customer));
-    
+
+    char loginid[100],password[100];
+    int flag;
     printf("Enter your Login ID: ");
-    fflush(stdin);
+    scanf("%d\n",&flag);
     gets(loginid);
     printf("Enter your password: ");
-    fflush(stdin);
     gets(password);
-    fflush(stdin);
     printf("Enter your amount depositing: ");
     fflush(stdin);
     scanf("%d",&amount);
