@@ -3,7 +3,6 @@
 
 int main()
 {
-    read_db_from_file();
     char buff[15];
     //printall();
     printf("Enter your choice : \n");
@@ -11,6 +10,7 @@ int main()
     printf("2. Register\n");
     gets(buff);
     int lr=atoi(buff);
+    read_db_from_file();
     switch (lr)
     {
         case 1:

@@ -1,5 +1,0 @@
-hi,hi123,1300
-one,password1,3155
-two,password2,700
-three,password3,1455
-hello,hello123,1234
