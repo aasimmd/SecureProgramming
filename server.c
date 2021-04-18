@@ -6,50 +6,30 @@ customer *tmp;
 
 int checkadminlogin()
 {
-    char loginid[100],password[100];
-    int flag;
-    printf("Enter your Login ID: ");
-    scanf("%d\n",&flag);
-    gets(loginid);
-    printf("Enter your password: ");
-    gets(password);
+    char buff[15];
+    int pass = 0;
+    
+    printf("\n Enter the password : \n");
+    clear_input_buffer();
+    gets(buff);
 
-    FILE* fp=fopen("admindata.txt","r");
-    if(!fp)
-        printf("Error in opening file");
-	char line[1024];
-	int lc=0;
-	for(char c=getc(fp); c!=EOF; c=getc(fp)) //counting number of lines in the database
-	{
-		if(c=='\n')
-			++lc;
-	}
-    rewind(fp);
-	int i=0;
-
-    char user[100], pass[100];
-    while (fgets(line,1024,(FILE*)fp) && i < lc) 
+    if(strcmp(buff, "admin"))
     {
-        strcpy(user, strtok(line, ","));
-        strcpy(pass, strtok(NULL, "\n"));
-		
-		if (strcmp(user,loginid) == 0)
-        {
-            if(strcmp(pass,password) ==0)
-            {
-                return 1;
-            }
-            else
-            {
-                return 0;
-            }
-        }
-        else
-        {
-            return -1;
-        }
+        printf ("\n Wrong Password \n");
     }
-	fclose(fp);
+    else
+    {
+        printf ("\n Correct Password \n");
+        pass = 1;
+    }
+
+    if(pass)
+    {
+        return(1);
+    }
+    else{
+        return(0);
+    }
 }
 
 
