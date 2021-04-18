@@ -4,6 +4,13 @@
 customer *cu;
 customer *tmp;
 
+int clear_input_buffer(void)
+{
+    int ch;
+    while(((ch=getchar())!=EOF) && (ch != '\n'));
+    return ch;
+}
+
 int checkadminlogin()
 {
     char buff[15];

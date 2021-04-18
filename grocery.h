@@ -13,7 +13,7 @@ extern customer *cu;
 extern customer *tmp;
 
 int checkadminlogin();
-
+int clear_input_buffer();
 int checkcustomerlogin();
 
 void registerCustomer();
