@@ -27,3 +27,5 @@ void add_to_file();
 int printall();
 
 void cart();
+
+void admin();

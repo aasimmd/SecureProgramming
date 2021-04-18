@@ -4,12 +4,13 @@
 int main()
 {
     read_db_from_file();
+    char buff[15];
     //printall();
     printf("Enter your choice : \n");
     printf("1. Login\n");
     printf("2. Register\n");
-    int lr;
-    scanf("%d",&lr);
+    gets(buff);
+    int lr=atoi(buff);
     switch (lr)
     {
         case 1:
@@ -33,7 +34,9 @@ int main()
                 
                 case 2:
                     achk = checkadminlogin();
-                    printf("%d",achk);
+                    printf("%d\n",achk);
+                    if(achk)
+                        admin();
                     break;
 
                 default:

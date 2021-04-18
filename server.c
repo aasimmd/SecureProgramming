@@ -16,17 +16,17 @@ int checkadminlogin()
     char buff[15];
     int pass = 0;
     
-    printf("\n Enter the password : \n");
+    printf("\nEnter the password : \n");
     clear_input_buffer();
     gets(buff);
 
     if(strcmp(buff, "admin"))
     {
-        printf ("\n Wrong Password \n");
+        printf ("\nWrong Password \n");
     }
     else
     {
-        printf ("\n Correct Password \n");
+        printf ("\nCorrect Password \n");
         pass = 1;
     }
 
@@ -37,6 +37,12 @@ int checkadminlogin()
     else{
         return(0);
     }
+}
+
+
+void admin()
+{
+    printf("Welcome Admin!\nYou are now authorized to make changed\n");
 }
 
 
