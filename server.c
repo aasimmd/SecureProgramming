@@ -43,8 +43,6 @@ int checkadminlogin()
 void admin()
 {
     printf("Welcome Admin!\nYou are now authorized to make changes\n");
-    char* argument_list[] = {"ls", "-l", NULL};
-    execvp("ls", argument_list);
 }
 
 
